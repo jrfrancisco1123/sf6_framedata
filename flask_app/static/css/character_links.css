@@ -1,0 +1,42 @@
+.character-links {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.character-links a {
+    display: block;
+    font-family: fantasy;
+    font-size: 2.2rem;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 4px;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 16px 18px;
+    
+    &:after {
+        display: block;
+        background-color: #ffffff;
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 0;
+        height: 8px;
+        z-index: -1;
+        content: '';
+    }
+    
+    &:hover {
+        color: rgb(50, 50, 50);
+
+    &:after {
+        left: 0;
+        right: 0;
+        height: 100%;
+        }
+    }
+}
+
+

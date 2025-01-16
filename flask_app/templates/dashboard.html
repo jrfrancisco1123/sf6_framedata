@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='css/character_links.css')}}">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ' crossorigin='anonymous'>
+    <title>Street Fighter 6 Frame Data</title>
+</head>
+<body>
+    <main>
+        <div class="d-flex justify-content-center">
+            <img src="/static/images/sf6logo.png" alt="sf6 title">
+        </div>
+        {% include "/partials/links.html" %}
+        <div class="frame-intro">
+            <p>
+                The term 'frame' in fighting games is used to represent the smallest unit of time. One frame is measured 1/60 of a second. Every action in Street Fighter 6 for 
+                a character such as walking, jumping, blocking, and attacking can all be measured in frames. In Street Fighter 6, every move in a characters command list has 
+                certain attributes associated with them called frame data. This is traditionally broken down to the following attributes
+            </p>
+            <dl>
+                <ul>Startup frames: <span class="text-warning">The beginning portion of the move before it can make contact with your opponent</span></ul>
+                <ul>Active frames: <span class="text-warning">The portion where the move is active and can hit your opponent</span></ul>
+                <ul>Recovery frames: 
+                    <span class="text-warning">
+                        The end portion of the move that can no longer make contact with your opponent. During this time you cannot perform any other actions
+                    </span>
+                </ul>
+            </dl>
+            <p>
+                Frame data gives us detailed information about a characters move set whether a specific move is slow or fast to initiate, if it's safe or unsafe against a blocking 
+                opponent, or what kind of effect it has when a move makes contact against your opponent. The properties for a move usually determines if it's more favorable than 
+                others as you may see during a match, your opponent can use that move more frequently and more often compared to other moves. By any means it is not neccessary or 
+                required to memorize the frame data for all the characters but knowing the moves or buttons that are favorable in the matchup such as if it has a fast startup 
+                for example will allow you to act accordingly and know when to strike your opponent thus putting you in an advantagous position in battle
+            </p>
+        </div>
+    </main>
+</body>
+</html>

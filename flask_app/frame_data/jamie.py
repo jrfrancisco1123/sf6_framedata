@@ -1,0 +1,120 @@
+commons = {
+    'forward dash': ['', '', '19 total frames', ['', ''], '0', ''],
+    'backward dash': ['', '', '23 total frames', ['', ''], '0', ''],
+    'drive impact': ['26', '26-27', '35', ['D', '-3'], '800', 'High'],
+    'drive reversal (blocking)': ['20', '20-22', '26', ['D', '-6'], '500', 'High'],
+    'drive reversal (recovering)': ['18', '18-20', '26', ['D', '-6'], '500', 'High'],
+    'drive parry': ['1', '1-12', '33', ['', ''], '0', ''],
+    'perfect parry (strike)': ['1', '', '1', ['', ''], '0', ''],
+    'perfect parry (projectile)': ['1', '', '10', ['', ''], '0', ''],
+    'parry drive rush': ['', '', '45 total frames', ['', ''], '0', ''],
+    'cancel drive rush': ['', '', '46 total frames', ['', ''], '0', '']
+}
+
+normals = {
+        'lp': ['5', '5-6', '7', ['5', '0'], '300', 'High'],
+        'mp': ['8', '8-11', '14', ['5', '2'], '600', 'High'],
+        'hp': ['5', '5-14', '20', ['1', '-3'], '900', 'High'],
+        'lk': ['5', '5-6', '11', ['3', '-1'], '300', 'High'],
+        'mk': ['10', '10-12', '17', ['2', '-3'], '600', 'High'],
+        'hk': ['15', '15-17', '21', ['1', '-5'], '800', 'High'],
+        'clp': ['4', '4-5', '9', ['5', '-1'], '250', 'High'],
+        'cmp': ['6', '6-8', '13', ['5', '-1'], '600', 'High'],
+        'chp': ['9', '9-13', '23', ['0', '-8'], '900', 'High'],
+        'clk': ['5', '5-6', '11', ['1', '-3'], '200', 'Low'],
+        'cmk': ['7', '7-9', '18', ['-1', '-6'], '500', 'Low'],
+        'chk': ['9', '9-15', '28', ['D', '-11'], '800', 'Low'],
+        'jlp': ['5', '5-13', '3 frames after landing', ['', ''], '300', 'Mid'],
+        'jmp': ['7', '7-10', '3 frames after landing', ['', ''], '700', 'Mid'],
+        'jhp': ['10', '10-15', '3 frames after landing', ['', ''], '800', 'Mid'],
+        'jlk': ['6', '6-11', '3 frames after landing', ['', ''], '300', 'Mid'],
+        'jmk': ['7', '7-12', '3 frames after landing', ['', ''], '500', 'Mid'],
+        'jhk': ['8', '8-19', '3 frames after landing', ['', ''], '800', 'Mid']
+    }
+
+uniques = {
+    'tensei kick': ['9', '9-11', '22', ['D', '-8'], '600', 'High'],
+    'phantom sway (2)': ['12', '12-14', '43', ['D', '-28'], '500', 'High'],
+    'phantom sway (3)': ['', '', '60 total frames', ['', ''], '0', ''],
+    'falling star kick': ['22', '22-24', '20', ['1', '-3'], '600', 'Mid'],
+    'hermits elbow': ['18', '18-21', '20', ['1', '-3'], '800', 'High'],
+    'senei kick': ['16', '16-18', '20', ['3', '-3'], '900', 'High'],
+    'bitter strikes (1)': ['5', '5-7', '9', ['2', '-3'], '300', 'High'],
+    'bitter strikes (2)': ['6', '6-7', '16', ['-3', '-8'], '200', 'High'],
+    'bitter strikes (3)': ['8', '8-10', '21', ['-2', '-10'], '500', 'High'],
+    'full moon kick (1)': ['22', '22-24', '20', ['1', '-3'], '600', 'Mid'],
+    'full moon kick (2)': ['15', '15-24', '28', ['D', '-14'], '400', 'High'],
+    'full moon kick (3)': ['', '', '61 total frames', ['', ''], '0', ''],
+    'intoxicated assault (1)': ['18', '18-20', '21', ['1', '-3'], '800', 'High'],
+    'intoxicated assault (2)': ['21', '21-24', '20', ['1', '-11'], '600', 'High'],
+    'intoxicated assault (3)': ['21', '21-23', '37', ['D', '-20'], '800', 'High'],
+    'ransui haze (1)': ['16', '16-19', '19', ['3', '-3'], '900', 'High'],
+    'ransui haze (2)': ['', '', '75 total frames', ['', ''], '0', ''],
+    'ransui haze (3rd hit/immediate)': ['15', '15-18', '28', ['D', '-12'], '850', 'High'],
+    'ransui haze (3rd hit/delayed)': ['4', '4-28', '27', ['D', '-9'], '1200', 'High'],
+    'ransui haze (3rd hit/longest possible delay)': ['', '', '52 total frames', ['', ''], '0', '']
+}
+
+specials = {
+    'the devil inside': ['', '', '50 total frames', ['', ''], '0', ''],
+    'light freeflow strikes (1)': ['13', '13-14', '24', ['-1', '-6'], '350', 'High'], 
+    'light freeflow strikes (drink lvl 4) (1)': ['13', '13-26', '19', ['1', '-3'], '400', 'High'],
+    'medium freeflow strikes (1)': ['16', '16-17', '24', ['-1', '-6'], '400', 'High'],
+    'medium freeflow strikes (drink lvl 4) (1)': ['16', '16-29', '19', ['1', '-3'], '500', 'High'],
+    'heavy freeflow strikes (1)': ['19', '19-20', '24', ['-1', '-6'], '450', 'High'],
+    'heavy freeflow strikes (drink lvl 4) (1)': ['19', '19-32', '19', ['1', '-3'], '600', 'High'],
+    'od freeflow strikes (1)': ['13', '13-14', '24', ['1', '-3'], '450', 'High'],
+    'od freeflow strikes (drink lvl 4) (1)': ['13', '16-26', '19', ['3', '-3'], '600', 'High'],
+    'light freeflow strikes (2)': ['13', '13-14', '28', ['-3', '-13'], '350', 'High'],
+    'medium freeflow strikes (2)': ['16', '16-17', '28', ['-3', '-11'], '400', 'High'],
+    'heavy freeflow strikes (2)': ['19', '19-20', '28', ['-3', '-9'], '450', 'High'],
+    'freeflow strikes (drink lvl 4) (2)': ['15', '15-23', '27', ['-2', '-10'], '450', 'High'],
+    'od freeflow strikes (2)': ['13', '13-14', '28', ['-3', '-9'], '450', 'High'],
+    'od freeflow strikes (drink lvl 4) (2)': ['15', '15-23', '27', ['-2', '-10'], '500', 'High'],
+    'light freeflow strikes (3)': ['13', '13-14', '30', ['D', '-17'], '550', 'High'],
+    'medium freeflow strikes (3)': ['16', '16-17', '30', ['D', '-15'], '600', 'High'],
+    'heavy freeflow strikes (3)': ['19', '19-20', '30', ['D', '-13'], '650', 'High'],
+    'freeflow strikes (drink lvl 4) (3)': ['16', '16-40', '28', ['D', '-14'], '600', 'High'],
+    'od freeflow strikes (3)': ['13', '13-14', '30', ['D', '-13'], '750', 'High'],
+    'od freeflow strikes (drink lvl 4) (3)': ['16', '16-40', '28', ['D', '-14'], '700', 'High'],
+    'light freeflow kicks (2)': ['14', '14-15', '32', ['-7', '-15'], '250', 'High'],
+    'medium freeflow kicks (2)': ['17', '17-18', '32', ['-7', '-15'], '300', 'High'],
+    'heavy freeflow kicks (2)': ['20', '20-21', '32', ['-7', '-15'], '300', 'High'],
+    'od freeflow kicks (2)': ['14', '14-15', '32', ['-7', '-15'], '350', 'High'],
+    'light freeflow kicks (3)': ['18', '18-19', '64', ['D', '-49'], '450', 'High'],
+    'medium freeflow kicks (3)': ['21', '21-22', '64', ['D', '-49'], '500', 'High'],
+    'heavy freeflow kicks (3)': ['24', '24-25', '64', ['D', '-49'], '550', 'High'],
+    'od freeflow kicks (3)': ['18', '18-19', '64', ['D', '-49'], '600', 'High'],
+    'light swagger step': ['17', '17-25', '17', ['D', '-6'], '900', 'High'],
+    'medium swagger step': ['20', '20-28', '17', ['D', '-6'], '1000', 'High'],
+    'heavy swagger step': ['25', '25-33', '16', ['D', '-3'], '1200', 'High'],
+    'od swagger step': ['20', '20-28', '15', ['D', '-1'], '1100', 'High'],
+    'light arrow kick': ['5', '5-50', '55', ['D', '-45'], '1000', 'High'],
+    'medium arrow kick': ['8', '8-43', '53', ['D', '-43'], '1200', 'High'],
+    'heavy arrow kick': ['10', '10-57', '53', ['D', '-43'], '1400', 'High'],
+    'od arrow kick': ['6', '6-51', '53', ['D', '-43'], '1500', 'High'],
+    'light luminous dive kick': ['11', '11-until landing', '13 frames after landing', ['D', ''], '1000', 'High'],
+    'medium luminous dive kick': ['11', '11-until landing', '13 frames after landing', ['D', ''], '1000', 'High'],
+    'heavy luminous dive kick': ['11', '11-until landing', '13 frames after landing', ['D', ''], '1000', 'High'],
+    'od luminous dive kick': ['11', '11-until landing', '13 frames after landing', ['D', ''], '800', 'High'],
+    'light bakkai': ['18', '18-43', '24', ['D', '-12'], '1400', 'High'],
+    'medium bakkai': ['22', '22-59', '31', ['D', '-16'], '1600', 'High'],
+    'heavy bakkai': ['26', '26-92', '32', ['D', '-17'], '1800', 'High'],
+    'od bakkai': ['21', '21-100', '62', ['D', '-46'], '2000', 'High'],
+    'tenshin': ['8', '8-9', '52', ['8', ''], '0', 'Throw'],
+    'od tenshin': ['8', '8-9', '52', ['D', ''], '650', 'Throw'],
+    'swagger hermit punch': ['19', '19-21', '39', ['D', '-23'], '900', 'High'],
+    'od swagger hermit punch': ['19', '19-21', '39', ['D', '-23'], '1000', 'High']
+} 
+
+super_arts = {
+    'breakin': ['8', '8-133', '74-107', ['D', '-60-93'], '2200/1850', 'High'],
+    'the devils song': ['', '', '6 total frames', ['', ''], '0', ''],
+    'getsuga saiho': ['10', '10-28', '42', ['D', '-27'], '2600', 'High'],
+    'getsuga saiho (under 25% vit)': ['10', '10-28', '42', ['D', '-27'], '4500', 'High']
+}
+
+throws = {
+    'back shaver': ['5', '5-7', '23', ['D', ''], '1200', 'Throw'],
+    'wheel punch': ['5', '5-7', '23', ['D', ''], '1200', 'Throw']
+}

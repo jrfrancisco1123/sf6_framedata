@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='css/character_page.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='css/character_links.css')}}">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ' crossorigin='anonymous'>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+    <title>Street Fighter 6: CHUN-LI</title>
+</head>
+<body>
+    <main>
+        <script defer src="{{ url_for ('static', filename='js/main.js') }}"></script>
+        <div class="character-box">
+            <h1 class="character-name">Chun-Li</h1>
+        </div>
+        {% include "/partials/links.html" %}
+        <div class="frame-data">
+            <div class="common-section">
+                <img src="/static/images/move_titles/common.png" class="move-titles" alt="common section">
+                <table>
+                    <thead>
+                        <tr>
+                            {% include "/partials/table_headers.html" %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Forward Dash &#129146;&#129146;</td>
+                            <td>{{ commons['forward dash'][0] }}</td>
+                            <td>{{ commons['forward dash'][1] }}</td>
+                            <td>{{ commons['forward dash'][2] }}</td>
+                            <td>{{ commons['forward dash'][3][0] }}</td>
+                            <td>{{ commons['forward dash'][3][1] }}</td>
+                            <td>{{ commons['forward dash'][4] }}</td>
+                            <td>{{ commons['forward dash'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Backward Dash &#129144;&#129144;</td>
+                            <td>{{ commons['backward dash'][0] }}</td>
+                            <td>{{ commons['backward dash'][1] }}</td>
+                            <td>{{ commons['backward dash'][2] }}</td>
+                            <td>{{ commons['backward dash'][3][0] }}</td>
+                            <td>{{ commons['backward dash'][3][1] }}</td>
+                            <td>{{ commons['backward dash'][4] }}</td>
+                            <td>{{ commons['backward dash'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Drive Impact: Hosen Kick <span class="btn-h">PK</span></td>
+                            <td>{{ commons['drive impact'][0] }}</td>
+                            <td>{{ commons['drive impact'][1] }}</td>
+                            <td>{{ commons['drive impact'][2] }}</td>
+                            <td>{{ commons['drive impact'][3][0] }}</td>
+                            <td>{{ commons['drive impact'][3][1] }}</td>
+                            <td>{{ commons['drive impact'][4] }}</td>
+                            <td>{{ commons['drive impact'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Drive Reversal <span class="move-details">(While Blocking)</span>: Hoyoku Kick 
+                                <span class="move-details">(When Blocking or During a Successful Drive Parry)</span> &#129146; + <span class="btn-h">PK</span>
+                            </td>
+                            <td>{{ commons['drive reversal (blocking)'][0] }}</td>
+                            <td>{{ commons['drive reversal (blocking)'][1] }}</td>
+                            <td>{{ commons['drive reversal (blocking)'][2] }}</td>
+                            <td>{{ commons['drive reversal (blocking)'][3][0] }}</td>
+                            <td>{{ commons['drive reversal (blocking)'][3][1] }}</td>
+                            <td>{{ commons['drive reversal (blocking)'][4] }}</td>
+                            <td>{{ commons['drive reversal (blocking)'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Drive Reversal <span class="move-details">(While Recovering)</span>: Hoyoku Kick 
+                                <span class="move-details">(During Knockdown Recovery)</span> &#129146; + <span class="btn-h">PK</span>
+                            </td>
+                            <td>{{ commons['drive reversal (recovering)'][0] }}</td>
+                            <td>{{ commons['drive reversal (recovering)'][1] }}</td>
+                            <td>{{ commons['drive reversal (recovering)'][2] }}</td>
+                            <td>{{ commons['drive reversal (recovering)'][3][0] }}</td>
+                            <td>{{ commons['drive reversal (recovering)'][3][1] }}</td>
+                            <td>{{ commons['drive reversal (recovering)'][4] }}</td>
+                            <td>{{ commons['drive reversal (recovering)'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Drive Parry <span class="btn-m">PK</span></td>
+                            <td>{{ commons['drive parry'][0] }}</td>
+                            <td>{{ commons['drive parry'][1] }}</td>
+                            <td>{{ commons['drive parry'][2] }}</td>
+                            <td>{{ commons['drive parry'][3][0] }}</td>
+                            <td>{{ commons['drive parry'][3][1] }}</td>
+                            <td>{{ commons['drive parry'][4] }}</td>
+                            <td>{{ commons['drive parry'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Perfect Parry <span class="move-details">(Strike)</span> <span class="btn-m">PK</span></td>
+                            <td>{{ commons['perfect parry (strike)'][0] }}</td>
+                            <td>{{ commons['perfect parry (strike)'][1] }}</td>
+                            <td>{{ commons['perfect parry (strike)'][2] }}</td>
+                            <td>{{ commons['perfect parry (strike)'][3][0] }}</td>
+                            <td>{{ commons['perfect parry (strike)'][3][1] }}</td>
+                            <td>{{ commons['perfect parry (strike)'][4] }}</td>
+                            <td>{{ commons['perfect parry (strike)'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Perfect Parry <span class="move-details">(Projectile)</span> <span class="btn-m">PK</span></td>
+                            <td>{{ commons['perfect parry (projectile)'][0] }}</td>
+                            <td>{{ commons['perfect parry (projectile)'][1] }}</td>
+                            <td>{{ commons['perfect parry (projectile)'][2] }}</td>
+                            <td>{{ commons['perfect parry (projectile)'][3][0] }}</td>
+                            <td>{{ commons['perfect parry (projectile)'][3][1] }}</td>
+                            <td>{{ commons['perfect parry (projectile)'][4] }}</td>
+                            <td>{{ commons['perfect parry (projectile)'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Parry Drive Rush <span class="move-details">(During a Drive Parry)</span> &#129146;&#129146;</td>
+                            <td>{{ commons['parry drive rush'][0] }}</td>
+                            <td>{{ commons['parry drive rush'][1] }}</td>
+                            <td>{{ commons['parry drive rush'][2] }}</td>
+                            <td>{{ commons['parry drive rush'][3][0] }}</td>
+                            <td>{{ commons['parry drive rush'][3][1] }}</td>
+                            <td>{{ commons['parry drive rush'][4] }}</td>
+                            <td>{{ commons['parry drive rush'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Cancel Drive Rush <span class="move-details">(While Connecting with a Special-Cancelable Move)</span>
+                                &#129146;&#129146; <span class="move-details">or</span> <span class="btn-m">PK</span>
+                            </td>
+                            <td>{{ commons['cancel drive rush'][0] }}</td>
+                            <td>{{ commons['cancel drive rush'][1] }}</td>
+                            <td>{{ commons['cancel drive rush'][2] }}</td>
+                            <td>{{ commons['cancel drive rush'][3][0] }}</td>
+                            <td>{{ commons['cancel drive rush'][3][1] }}</td>
+                            <td>{{ commons['cancel drive rush'][4] }}</td>
+                            <td>{{ commons['cancel drive rush'][5] }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="normal-section">
+                <img src="/static/images/move_titles/normals.png" class="move-titles" alt="normal section">
+                <table>
+                    <thead>
+                        <tr>
+                            {% include "/partials/table_headers.html" %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Standing Light Punch <span class="btn-l">P</span></td>
+                            <td>{{ normals.lp[0] }}</td>
+                            <td>{{ normals.lp[1] }}</td>
+                            <td>{{ normals.lp[2] }}</td>
+                            <td>{{ normals.lp[3][0] }}</td>
+                            <td>{{ normals.lp[3][1] }}</td>
+                            <td>{{ normals.lp[4] }}</td>
+                            <td>{{ normals.lp[5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Standing Medium Punch <span class="btn-m">P</span></td>
+                            <td>{{ normals.mp[0] }}</td>
+                            <td>{{ normals.mp[1] }}</td>
+                            <td>{{ normals.mp[2] }}</td>
+                            <td>{{ normals.mp[3][0] }}</td>
+                            <td>{{ normals.mp[3][1] }}</td>
+                            <td>{{ normals.mp[4] }}</td>
+                            <td>{{ normals.mp[5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Standing Heavy Punch <span class="btn-h">P</span></td>
+                            <td>{{ normals.hp[0] }}</td>
+                            <td>{{ normals.hp[1] }}</td>
+                            <td>{{ normals.hp[2] }}</td>
+                            <td>{{ normals.hp[3][0] }}</td>
+                            <td>{{ normals.hp[3][1] }}</td>
+                            <td>{{ normals.hp[4] }}</td>
+                            <td>{{ normals.hp[5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Standing Light Kick <span class="btn-l">K</span></td>
+                            <td>{{ normals.lk[0] }}</td>
+                            <td>{{ normals.lk[1] }}</td>
+                            <td>{{ normals.lk[2] }}</td>
+                            <td>{{ normals.lk[3][0] }}</td>
+                            <td>{{ normals.lk[3][1] }}</td>
+                            <td>{{ normals.lk[4] }}</td>
+                            <td>{{ normals.lk[5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Standing Medium Kick <span class="btn-m">K</span></td>
+                            <td>{{ normals.mk[0] }}</td>
+                            <td>{{ normals.mk[1] }}</td>
+                            <td>{{ normals.mk[2] }}</td>
+                            <td>{{ normals.mk[3][0] }}</td>
+                            <td>{{ normals.mk[3][1] }}</td>
+                            <td>{{ normals.mk[4] }}</td>
+                            <td>{{ normals.mk[5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Standing Heavy Kick <span class="btn-h">K</span></td>
+                            <td>{{ normals.hk[0] }}</td>
+                            <td>{{ normals.hk[1] }}</td>
+                            <td>{{ normals.hk[2] }}</td>
+                            <td>{{ normals.hk[3][0] }}</td>
+                            <td>{{ normals.hk[3][1] }}</td>
+                            <td>{{ normals.hk[4] }}</td>
+                            <td>{{ normals.hk[5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Crouching Light Punch &#129147; + <span class="btn-l">P</span></td>
+                            <td>{{ normals.clp[0] }}</td>
+                            <td>{{ normals.clp[1] }}</td>
+                            <td>{{ normals.clp[2] }}</td>
+                            <td>{{ normals.clp[3][0] }}</td>
+                            <td>{{ normals.clp[3][1] }}</td>
+                            <td>{{ normals.clp[4] }}</td>
+                            <td>{{ normals.clp[5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Crouching Medium Punch &#129147; + <span class="btn-m">P</span></td>
+                            <td>{{ normals.cmp[0] }}</td>
+                            <td>{{ normals.cmp[1] }}</td>
+                            <td>{{ normals.cmp[2] }}</td>
+                            <td>{{ normals.cmp[3][0] }}</td>
+                            <td>{{ normals.cmp[3][1] }}</td>
+                            <td>{{ normals.cmp[4] }}</td>
+                            <td>{{ normals.cmp[5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Crouching Heavy Punch &#129147; + <span class="btn-h">P</span></td>
+                            <td>{{ normals.chp[0] }}</td>
+                            <td>{{ normals.chp[1] }}</td>
+                            <td>{{ normals.chp[2] }}</td>
+                            <td>{{ normals.chp[3][0] }}</td>
+                            <td>{{ normals.chp[3][1] }}</td>
+                            <td>{{ normals.chp[4] }}</td>
+                            <td>{{ normals.chp[5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Crouching Light Kick &#129147; + <span class="btn-l">K</span></td>
+                            <td>{{ normals.clk[0] }}</td>
+                            <td>{{ normals.clk[1] }}</td>
+                            <td>{{ normals.clk[2] }}</td>
+                            <td>{{ normals.clk[3][0] }}</td>
+                            <td>{{ normals.clk[3][1] }}</td>
+                            <td>{{ normals.clk[4] }}</td>
+                            <td>{{ normals.clk[5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Crouching Medium Kick &#129147; + <span class="btn-m">K</span></td>
+                            <td>{{ normals.cmk[0] }}</td>
+                            <td>{{ normals.cmk[1] }}</td>
+                            <td>{{ normals.cmk[2] }}</td>
+                            <td>{{ normals.cmk[3][0] }}</td>
+                            <td>{{ normals.cmk[3][1] }}</td>
+                            <td>{{ normals.cmk[4] }}</td>
+                            <td>{{ normals.cmk[5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Crouching Heavy Kick &#129147; + <span class="btn-h">K</span></td>
+                            <td>{{ normals.chk[0] }}</td>
+                            <td>{{ normals.chk[1] }}</td>
+                            <td>{{ normals.chk[2] }}</td>
+                            <td>{{ normals.chk[3][0] }}</td>
+                            <td>{{ normals.chk[3][1] }}</td>
+                            <td>{{ normals.chk[4] }}</td>
+                            <td>{{ normals.chk[5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Jumping Light Punch <span class="move-details">(During a Jump)</span> <span class="btn-l">P</span></td>
+                            <td>{{ normals.jlp[0] }}</td>
+                            <td>{{ normals.jlp[1] }}</td>
+                            <td>{{ normals.jlp[2] }}</td>
+                            <td>{{ normals.jlp[3][0] }}</td>
+                            <td>{{ normals.jlp[3][1] }}</td>
+                            <td>{{ normals.jlp[4] }}</td>
+                            <td>{{ normals.jlp[5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Jumping Medium Punch <span class="move-details">(During a Jump)</span> <span class="btn-m">P</span></td>
+                            <td>{{ normals.jmp[0] }}</td>
+                            <td>{{ normals.jmp[1] }}</td>
+                            <td>{{ normals.jmp[2] }}</td>
+                            <td>{{ normals.jmp[3][0] }}</td>
+                            <td>{{ normals.jmp[3][1] }}</td>
+                            <td>{{ normals.jmp[4] }}</td>
+                            <td>{{ normals.jmp[5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Jumping Heavy Punch <span class="move-details">(During a Jump)</span> <span class="btn-h">P</span></td>
+                            <td>{{ normals.jhp[0] }}</td>
+                            <td>{{ normals.jhp[1] }}</td>
+                            <td>{{ normals.jhp[2] }}</td>
+                            <td>{{ normals.jhp[3][0] }}</td>
+                            <td>{{ normals.jhp[3][1] }}</td>
+                            <td>{{ normals.jhp[4] }}</td>
+                            <td>{{ normals.jhp[5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Jumping Light Kick <span class="move-details">(During a Jump)</span> <span class="btn-l">K</span></td>
+                            <td>{{ normals.jlk[0] }}</td>
+                            <td>{{ normals.jlk[1] }}</td>
+                            <td>{{ normals.jlk[2] }}</td>
+                            <td>{{ normals.jlk[3][0] }}</td>
+                            <td>{{ normals.jlk[3][1] }}</td>
+                            <td>{{ normals.jlk[4] }}</td>
+                            <td>{{ normals.jlk[5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Jumping Medium Kick <span class="move-details">(During a Jump)</span> <span class="btn-m">K</span></td>
+                            <td>{{ normals.jmk[0] }}</td>
+                            <td>{{ normals.jmk[1] }}</td>
+                            <td>{{ normals.jmk[2] }}</td>
+                            <td>{{ normals.jmk[3][0] }}</td>
+                            <td>{{ normals.jmk[3][1] }}</td>
+                            <td>{{ normals.jmk[4] }}</td>
+                            <td>{{ normals.jmk[5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Jumping Heavy Kick <span class="move-details">(During a Jump)</span> <span class="btn-h">K</span</td>
+                            <td>{{ normals.jhk[0] }}</td>
+                            <td>{{ normals.jhk[1] }}</td>
+                            <td>{{ normals.jhk[2] }}</td>
+                            <td>{{ normals.jhk[3][0] }}</td>
+                            <td>{{ normals.jhk[3][1] }}</td>
+                            <td>{{ normals.jhk[4] }}</td>
+                            <td>{{ normals.jhk[5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Jumping Heavy Kick <span class="move-details">(During a Neutral Jump)</span> <span class="btn-h">K</span></td>
+                            <td>{{ normals['jhk (neutral jump)'][0] }}</td>
+                            <td>{{ normals['jhk (neutral jump)'][1] }}</td>
+                            <td>{{ normals['jhk (neutral jump)'][2] }}</td>
+                            <td>{{ normals['jhk (neutral jump)'][3][0] }}</td>
+                            <td>{{ normals['jhk (neutral jump)'][3][1] }}</td>
+                            <td>{{ normals['jhk (neutral jump)'][4] }}</td>
+                            <td>{{ normals['jhk (neutral jump)'][5] }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="unique-section">
+                <img src="/static/images/move_titles/uniques.png" class="move-titles" alt="unique section">
+                <table>
+                    <thead>
+                        <tr>
+                            {% include "/partials/table_headers.html" %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Swift Thrust &#129144; <span class="move-details">or</span> &#129146; + <span class="btn-m">P</span></td>
+                            <td>{{ uniques['swift thrust'][0] }}</td>
+                            <td>{{ uniques['swift thrust'][1] }}</td>
+                            <td>{{ uniques['swift thrust'][2] }}</td>
+                            <td>{{ uniques['swift thrust'][3][0] }}</td>
+                            <td>{{ uniques['swift thrust'][3][1] }}</td>
+                            <td>{{ uniques['swift thrust'][4] }}</td>
+                            <td>{{ uniques['swift thrust'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Hakkei &#129144; + <span class="btn-h">P</span></td>
+                            <td>{{ uniques['hakkei'][0] }}</td>
+                            <td>{{ uniques['hakkei'][1] }}</td>
+                            <td>{{ uniques['hakkei'][2] }}</td>
+                            <td>{{ uniques['hakkei'][3][0] }}</td>
+                            <td>{{ uniques['hakkei'][3][1] }}</td>
+                            <td>{{ uniques['hakkei'][4] }}</td>
+                            <td>{{ uniques['hakkei'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Water Lotus Fist &#129150; + <span class="btn-h">P</span></td>
+                            <td>{{ uniques['water lotus fist'][0] }}</td>
+                            <td>{{ uniques['water lotus fist'][1] }}</td>
+                            <td>{{ uniques['water lotus fist'][2] }}</td>
+                            <td>{{ uniques['water lotus fist'][3][0] }}</td>
+                            <td>{{ uniques['water lotus fist'][3][1] }}</td>
+                            <td>{{ uniques['water lotus fist'][4] }}</td>
+                            <td>{{ uniques['water lotus fist'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Yokusen Kick &#129146; + <span class="btn-h">K</span></td>
+                            <td>{{ uniques['yokusen kick'][0] }}</td>
+                            <td>{{ uniques['yokusen kick'][1] }}</td>
+                            <td>{{ uniques['yokusen kick'][2] }}</td>
+                            <td>{{ uniques['yokusen kick'][3][0] }}</td>
+                            <td>{{ uniques['yokusen kick'][3][1] }}</td>
+                            <td>{{ uniques['yokusen kick'][4] }}</td>
+                            <td>{{ uniques['yokusen kick'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Falling Crane &#129150; + <span class="btn-h">K</span></td>
+                            <td>{{ uniques['falling crane'][0] }}</td>
+                            <td>{{ uniques['falling crane'][1] }}</td>
+                            <td>{{ uniques['falling crane'][2] }}</td>
+                            <td>{{ uniques['falling crane'][3][0] }}</td>
+                            <td>{{ uniques['falling crane'][3][1] }}</td>
+                            <td>{{ uniques['falling crane'][4] }}</td>
+                            <td>{{ uniques['falling crane'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Yoso Kick <span class="move-details">(1) (During a Jump)</span> &#129147; + <span class="btn-m">K</span></td>
+                            <td>{{ uniques['yoso kick (1)'][0] }}</td>
+                            <td>{{ uniques['yoso kick (1)'][1] }}</td>
+                            <td>{{ uniques['yoso kick (1)'][2] }}</td>
+                            <td>{{ uniques['yoso kick (1)'][3][0] }}</td>
+                            <td>{{ uniques['yoso kick (1)'][3][1] }}</td>
+                            <td>{{ uniques['yoso kick (1)'][4] }}</td>
+                            <td>{{ uniques['yoso kick (1)'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Yoso Kick <span class="move-details">(2) (During a Jump)</span> &#129147; + <span class="btn-m">K</span>
+                                &#129170; &#129147; + <span class="btn-m">K</span>
+                            </td>
+                            <td>{{ uniques['yoso kick (2)'][0] }}</td>
+                            <td>{{ uniques['yoso kick (2)'][1] }}</td>
+                            <td>{{ uniques['yoso kick (2)'][2] }}</td>
+                            <td>{{ uniques['yoso kick (2)'][3][0] }}</td>
+                            <td>{{ uniques['yoso kick (2)'][3][1] }}</td>
+                            <td>{{ uniques['yoso kick (2)'][4] }}</td>
+                            <td>{{ uniques['yoso kick (2)'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Yoso Kick <span class="move-details">(3) (During a Jump)</span> &#129147; + <span class="btn-m">K</span>
+                                &#129170; &#129147; + <span class="btn-m">K</span> &#129170; &#129147; + <span class="btn-m">K</span>
+                            </td>
+                            <td>{{ uniques['yoso kick (3)'][0] }}</td>
+                            <td>{{ uniques['yoso kick (3)'][1] }}</td>
+                            <td>{{ uniques['yoso kick (3)'][2] }}</td>
+                            <td>{{ uniques['yoso kick (3)'][3][0] }}</td>
+                            <td>{{ uniques['yoso kick (3)'][3][1] }}</td>
+                            <td>{{ uniques['yoso kick (3)'][4] }}</td>
+                            <td>{{ uniques['yoso kick (3)'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Soaring Eagle Punches <span class="move-details">(During a Jump)</span>
+                                <span class="btn-h">P</span> &#129170; <span class="btn-h">P</span>	
+                            </td>
+                            <td>{{ uniques['soaring eagle punches'][0] }}</td>
+                            <td>{{ uniques['soaring eagle punches'][1] }}</td>
+                            <td>{{ uniques['soaring eagle punches'][2] }}</td>
+                            <td>{{ uniques['soaring eagle punches'][3][0] }}</td>
+                            <td>{{ uniques['soaring eagle punches'][3][1] }}</td>
+                            <td>{{ uniques['soaring eagle punches'][4] }}</td>
+                            <td>{{ uniques['soaring eagle punches'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Serenity Stream &#129147;&#129151;&#129144; + <span class="btn-n">P</span></td>
+                            <td>{{ uniques['serenity stream'][0] }}</td>
+                            <td>{{ uniques['serenity stream'][1] }}</td>
+                            <td>{{ uniques['serenity stream'][2] }}</td>
+                            <td>{{ uniques['serenity stream'][3][0] }}</td>
+                            <td>{{ uniques['serenity stream'][3][1] }}</td>
+                            <td>{{ uniques['serenity stream'][4] }}</td>
+                            <td>{{ uniques['serenity stream'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Orchid Palm <span class="move-details">(During Serenity Stream)</span> <span class="btn-l">P</span></td>
+                            <td>{{ uniques['orchid palm'][0] }}</td>
+                            <td>{{ uniques['orchid palm'][1] }}</td>
+                            <td>{{ uniques['orchid palm'][2] }}</td>
+                            <td>{{ uniques['orchid palm'][3][0] }}</td>
+                            <td>{{ uniques['orchid palm'][3][1] }}</td>
+                            <td>{{ uniques['orchid palm'][4] }}</td>
+                            <td>{{ uniques['orchid palm'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Snake Strike <span class="move-details">(During Serenity Stream)</span> <span class="btn-m">P</span></td>
+                            <td>{{ uniques['snake strike'][0] }}</td>
+                            <td>{{ uniques['snake strike'][1] }}</td>
+                            <td>{{ uniques['snake strike'][2] }}</td>
+                            <td>{{ uniques['snake strike'][3][0] }}</td>
+                            <td>{{ uniques['snake strike'][3][1] }}</td>
+                            <td>{{ uniques['snake strike'][4] }}</td>
+                            <td>{{ uniques['snake strike'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Lotus Fist <span class="move-details">(During Serenity Stream)</span> <span class="btn-h">P</span></td>
+                            <td>{{ uniques['lotus fist'][0] }}</td>
+                            <td>{{ uniques['lotus fist'][1] }}</td>
+                            <td>{{ uniques['lotus fist'][2] }}</td>
+                            <td>{{ uniques['lotus fist'][3][0] }}</td>
+                            <td>{{ uniques['lotus fist'][3][1] }}</td>
+                            <td>{{ uniques['lotus fist'][4] }}</td>
+                            <td>{{ uniques['lotus fist'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Forward Strike <span class="move-details">(During Serenity Stream)</span> <span class="btn-l">K</span></td>
+                            <td>{{ uniques['forward strike'][0] }}</td>
+                            <td>{{ uniques['forward strike'][1] }}</td>
+                            <td>{{ uniques['forward strike'][2] }}</td>
+                            <td>{{ uniques['forward strike'][3][0] }}</td>
+                            <td>{{ uniques['forward strike'][3][1] }}</td>
+                            <td>{{ uniques['forward strike'][4] }}</td>
+                            <td>{{ uniques['forward strike'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Senpu Kick <span class="move-details">(During Serenity Stream)</span> <span class="btn-m">K</span></td>
+                            <td>{{ uniques['senpu kick'][0] }}</td>
+                            <td>{{ uniques['senpu kick'][1] }}</td>
+                            <td>{{ uniques['senpu kick'][2] }}</td>
+                            <td>{{ uniques['senpu kick'][3][0] }}</td>
+                            <td>{{ uniques['senpu kick'][3][1] }}</td>
+                            <td>{{ uniques['senpu kick'][4] }}</td>
+                            <td>{{ uniques['senpu kick'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Tenku Kick <span class="move-details">(During Serenity Stream)</span> <span class="btn-h">K</span></td>
+                            <td>{{ uniques['tenku kick'][0] }}</td>
+                            <td>{{ uniques['tenku kick'][1] }}</td>
+                            <td>{{ uniques['tenku kick'][2] }}</td>
+                            <td>{{ uniques['tenku kick'][3][0] }}</td>
+                            <td>{{ uniques['tenku kick'][3][1] }}</td>
+                            <td>{{ uniques['tenku kick'][4] }}</td>
+                            <td>{{ uniques['tenku kick'][5] }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="special-section">
+                <img src="/static/images/move_titles/specials.png" class="move-titles" alt="special section">
+                <table>
+                    <thead>
+                        <tr>
+                            {% include "/partials/table_headers.html" %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Light Kikoken <span class="btn-m">&#129144;</span> &#129146; + <span class="btn-l">P</span></td>
+                            <td>{{ specials['light kikoken'][0] }}</td>
+                            <td>{{ specials['light kikoken'][1] }}</td>
+                            <td>{{ specials['light kikoken'][2] }}</td>
+                            <td>{{ specials['light kikoken'][3][0] }}</td>
+                            <td>{{ specials['light kikoken'][3][1] }}</td>
+                            <td>{{ specials['light kikoken'][4] }}</td>
+                            <td>{{ specials['light kikoken'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Medium Kikoken <span class="btn-m">&#129144;</span> &#129146; + <span class="btn-m">P</span></td>
+                            <td>{{ specials['medium kikoken'][0] }}</td>
+                            <td>{{ specials['medium kikoken'][1] }}</td>
+                            <td>{{ specials['medium kikoken'][2] }}</td>
+                            <td>{{ specials['medium kikoken'][3][0] }}</td>
+                            <td>{{ specials['medium kikoken'][3][1] }}</td>
+                            <td>{{ specials['medium kikoken'][4] }}</td>
+                            <td>{{ specials['medium kikoken'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Heavy Kikoken <span class="btn-m">&#129144;</span> &#129146; + <span class="btn-h">P</span></td>
+                            <td>{{ specials['heavy kikoken'][0] }}</td>
+                            <td>{{ specials['heavy kikoken'][1] }}</td>
+                            <td>{{ specials['heavy kikoken'][2] }}</td>
+                            <td>{{ specials['heavy kikoken'][3][0] }}</td>
+                            <td>{{ specials['heavy kikoken'][3][1] }}</td>
+                            <td>{{ specials['heavy kikoken'][4] }}</td>
+                            <td>{{ specials['heavy kikoken'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>OD Kikoken <span class="btn-m">&#129144;</span> &#129146; + <span class="btn-n">PP</span></td>
+                            <td>{{ specials['od kikoken'][0] }}</td>
+                            <td>{{ specials['od kikoken'][1] }}</td>
+                            <td>{{ specials['od kikoken'][2] }}</td>
+                            <td>{{ specials['od kikoken'][3][0] }}</td>
+                            <td>{{ specials['od kikoken'][3][1] }}</td>
+                            <td>{{ specials['od kikoken'][4] }}</td>
+                            <td>{{ specials['od kikoken'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Light Hundred Lightning Kicks &#129147;&#129150;&#129146; + <span class="btn-l">K</span></td>
+                            <td>{{ specials['light hundred lightning kicks'][0] }}</td>
+                            <td>{{ specials['light hundred lightning kicks'][1] }}</td>
+                            <td>{{ specials['light hundred lightning kicks'][2] }}</td>
+                            <td>{{ specials['light hundred lightning kicks'][3][0] }}</td>
+                            <td>{{ specials['light hundred lightning kicks'][3][1] }}</td>
+                            <td>{{ specials['light hundred lightning kicks'][4] }}</td>
+                            <td>{{ specials['light hundred lightning kicks'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Medium Hundred Lightning Kicks &#129147;&#129150;&#129146; + <span class="btn-m">K</span></td>
+                            <td>{{ specials['medium hundred lightning kicks'][0] }}</td>
+                            <td>{{ specials['medium hundred lightning kicks'][1] }}</td>
+                            <td>{{ specials['medium hundred lightning kicks'][2] }}</td>
+                            <td>{{ specials['medium hundred lightning kicks'][3][0] }}</td>
+                            <td>{{ specials['medium hundred lightning kicks'][3][1] }}</td>
+                            <td>{{ specials['medium hundred lightning kicks'][4] }}</td>
+                            <td>{{ specials['medium hundred lightning kicks'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Heavy Hundred Lightning Kicks &#129147;&#129150;&#129146; + <span class="btn-h">K</span></td>
+                            <td>{{ specials['heavy hundred lightning kicks'][0] }}</td>
+                            <td>{{ specials['heavy hundred lightning kicks'][1] }}</td>
+                            <td>{{ specials['heavy hundred lightning kicks'][2] }}</td>
+                            <td>{{ specials['heavy hundred lightning kicks'][3][0] }}</td>
+                            <td>{{ specials['heavy hundred lightning kicks'][3][1] }}</td>
+                            <td>{{ specials['heavy hundred lightning kicks'][4] }}</td>
+                            <td>{{ specials['heavy hundred lightning kicks'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>OD Hundred Lightning Kicks &#129147;&#129150;&#129146; + <span class="btn-n">KK</span></td>
+                            <td>{{ specials['od hundred lightning kicks'][0] }}</td>
+                            <td>{{ specials['od hundred lightning kicks'][1] }}</td>
+                            <td>{{ specials['od hundred lightning kicks'][2] }}</td>
+                            <td>{{ specials['od hundred lightning kicks'][3][0] }}</td>
+                            <td>{{ specials['od hundred lightning kicks'][3][1] }}</td>
+                            <td>{{ specials['od hundred lightning kicks'][4] }}</td>
+                            <td>{{ specials['od hundred lightning kicks'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Lightning Kick Barrage  <span class="move-details">(After an OD Hundred Lightning Kicks)</span> <span class="btn-n">KK</span></td>                        
+                            <td>{{ specials['lightning kick barrage'][0] }}</td>
+                            <td>{{ specials['lightning kick barrage'][1] }}</td>
+                            <td>{{ specials['lightning kick barrage'][2] }}</td>
+                            <td>{{ specials['lightning kick barrage'][3][0] }}</td>
+                            <td>{{ specials['lightning kick barrage'][3][1] }}</td>
+                            <td>{{ specials['lightning kick barrage'][4] }}</td>
+                            <td>{{ specials['lightning kick barrage'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Light Aerial Hundred Lightning Kicks <span class="move-details">(During a Neutral or Forward Jump)</span>
+                                &#129147;&#129150;&#129146; + <span class="btn-l">K</span>
+                            </td>
+                            <td>{{ specials['light aerial hundred lightning kicks'][0] }}</td>
+                            <td>{{ specials['light aerial hundred lightning kicks'][1] }}</td>
+                            <td>{{ specials['light aerial hundred lightning kicks'][2] }}</td>
+                            <td>{{ specials['light aerial hundred lightning kicks'][3][0] }}</td>
+                            <td>{{ specials['light aerial hundred lightning kicks'][3][1] }}</td>
+                            <td>{{ specials['light aerial hundred lightning kicks'][4] }}</td>
+                            <td>{{ specials['light aerial hundred lightning kicks'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Medium Aerial Hundred Lightning Kicks <span class="move-details">(During a Neutral or Forward Jump)</span>
+                                &#129147;&#129150;&#129146; + <span class="btn-m">K</span>
+                            </td>
+                            <td>{{ specials['medium aerial hundred lightning kicks'][0] }}</td>
+                            <td>{{ specials['medium aerial hundred lightning kicks'][1] }}</td>
+                            <td>{{ specials['medium aerial hundred lightning kicks'][2] }}</td>
+                            <td>{{ specials['medium aerial hundred lightning kicks'][3][0] }}</td>
+                            <td>{{ specials['medium aerial hundred lightning kicks'][3][1] }}</td>
+                            <td>{{ specials['medium aerial hundred lightning kicks'][4] }}</td>
+                            <td>{{ specials['medium aerial hundred lightning kicks'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Heavy Aerial Hundred Lightning Kicks <span class="move-details">(During a Neutral or Forward Jump)</span>
+                                &#129147;&#129150;&#129146; + <span class="btn-h">K</span>
+                            </td>
+                            <td>{{ specials['heavy aerial hundred lightning kicks'][0] }}</td>
+                            <td>{{ specials['heavy aerial hundred lightning kicks'][1] }}</td>
+                            <td>{{ specials['heavy aerial hundred lightning kicks'][2] }}</td>
+                            <td>{{ specials['heavy aerial hundred lightning kicks'][3][0] }}</td>
+                            <td>{{ specials['heavy aerial hundred lightning kicks'][3][1] }}</td>
+                            <td>{{ specials['heavy aerial hundred lightning kicks'][4] }}</td>
+                            <td>{{ specials['heavy aerial hundred lightning kicks'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                OD Aerial Hundred Lightning Kicks <span class="move-details">(During a Neutral or Forward Jump)</span>
+                                &#129147;&#129150;&#129146; + <span class="btn-n">KK</span>
+                            </td>
+                            <td>{{ specials['od aerial hundred lightning kicks'][0] }}</td>
+                            <td>{{ specials['od aerial hundred lightning kicks'][1] }}</td>
+                            <td>{{ specials['od aerial hundred lightning kicks'][2] }}</td>
+                            <td>{{ specials['od aerial hundred lightning kicks'][3][0] }}</td>
+                            <td>{{ specials['od aerial hundred lightning kicks'][3][1] }}</td>
+                            <td>{{ specials['od aerial hundred lightning kicks'][4] }}</td>
+                            <td>{{ specials['od aerial hundred lightning kicks'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Light Spinning Bird Kick <span class="btn-m">&#129147;</span> &#129145; + <span class="btn-l">K</span></td>
+                            <td>{{ specials['light spinning bird kick'][0] }}</td>
+                            <td>{{ specials['light spinning bird kick'][1] }}</td>
+                            <td>{{ specials['light spinning bird kick'][2] }}</td>
+                            <td>{{ specials['light spinning bird kick'][3][0] }}</td>
+                            <td>{{ specials['light spinning bird kick'][3][1] }}</td>
+                            <td>{{ specials['light spinning bird kick'][4] }}</td>
+                            <td>{{ specials['light spinning bird kick'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Medium Spinning Bird Kick <span class="btn-m">&#129147;</span> &#129145; + <span class="btn-m">K</span></td>
+                            <td>{{ specials['medium spinning bird kick'][0] }}</td>
+                            <td>{{ specials['medium spinning bird kick'][1] }}</td>
+                            <td>{{ specials['medium spinning bird kick'][2] }}</td>
+                            <td>{{ specials['medium spinning bird kick'][3][0] }}</td>
+                            <td>{{ specials['medium spinning bird kick'][3][1] }}</td>
+                            <td>{{ specials['medium spinning bird kick'][4] }}</td>
+                            <td>{{ specials['medium spinning bird kick'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Heavy Spinning Bird Kick <span class="btn-m">&#129147;</span> &#129145; + <span class="btn-h">K</span></td>
+                            <td>{{ specials['heavy spinning bird kick'][0] }}</td>
+                            <td>{{ specials['heavy spinning bird kick'][1] }}</td>
+                            <td>{{ specials['heavy spinning bird kick'][2] }}</td>
+                            <td>{{ specials['heavy spinning bird kick'][3][0] }}</td>
+                            <td>{{ specials['heavy spinning bird kick'][3][1] }}</td>
+                            <td>{{ specials['heavy spinning bird kick'][4] }}</td>
+                            <td>{{ specials['heavy spinning bird kick'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>OD Spinning Bird Kick <span class="btn-m">&#129147;</span> &#129145; + <span class="btn-n">KK</span></td>
+                            <td>{{ specials['od spinning bird kick'][0] }}</td>
+                            <td>{{ specials['od spinning bird kick'][1] }}</td>
+                            <td>{{ specials['od spinning bird kick'][2] }}</td>
+                            <td>{{ specials['od spinning bird kick'][3][0] }}</td>
+                            <td>{{ specials['od spinning bird kick'][3][1] }}</td>
+                            <td>{{ specials['od spinning bird kick'][4] }}</td>
+                            <td>{{ specials['od spinning bird kick'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Light Hazanshu &#129147;&#129151;&#129144; + <span class="btn-l">K</span></td>
+                            <td>{{ specials['light hazanshu'][0] }}</td>
+                            <td>{{ specials['light hazanshu'][1] }}</td>
+                            <td>{{ specials['light hazanshu'][2] }}</td>
+                            <td>{{ specials['light hazanshu'][3][0] }}</td>
+                            <td>{{ specials['light hazanshu'][3][1] }}</td>
+                            <td>{{ specials['light hazanshu'][4] }}</td>
+                            <td>{{ specials['light hazanshu'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Medium Hazanshu &#129147;&#129151;&#129144; + <span class="btn-m">K</span></td>
+                            <td>{{ specials['medium hazanshu'][0] }}</td>
+                            <td>{{ specials['medium hazanshu'][1] }}</td>
+                            <td>{{ specials['medium hazanshu'][2] }}</td>
+                            <td>{{ specials['medium hazanshu'][3][0] }}</td>
+                            <td>{{ specials['medium hazanshu'][3][1]}}</td>
+                            <td>{{ specials['medium hazanshu'][4] }}</td>
+                            <td>{{ specials['medium hazanshu'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Heavy Hazanshu &#129147;&#129151;&#129144; + <span class="btn-h">K</span></td>
+                            <td>{{ specials['heavy hazanshu'][0] }}</td>
+                            <td>{{ specials['heavy hazanshu'][1] }}</td>
+                            <td>{{ specials['heavy hazanshu'][2] }}</td>
+                            <td>{{ specials['heavy hazanshu'][3][0] }}</td>
+                            <td>{{ specials['heavy hazanshu'][3][1] }}</td>
+                            <td>{{ specials['heavy hazanshu'][4] }}</td>
+                            <td>{{ specials['heavy hazanshu'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>OD Hazanshu &#129147;&#129151;&#129144; + <span class="btn-n">KK</span></td>
+                            <td>{{ specials['od hazanshu'][0] }}</td>
+                            <td>{{ specials['od hazanshu'][1] }}</td>
+                            <td>{{ specials['od hazanshu'][2] }}</td>
+                            <td>{{ specials['od hazanshu'][3][0] }}</td>
+                            <td>{{ specials['od hazanshu'][3][1] }}</td>
+                            <td>{{ specials['od hazanshu'][4] }}</td>
+                            <td>{{ specials['od hazanshu'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Light Tensho Kicks &#129147;&#129147; + <span class="btn-l">K</span></td>
+                            <td>{{ specials['light tensho kicks'][0] }}</td>
+                            <td>{{ specials['light tensho kicks'][1] }}</td>
+                            <td>{{ specials['light tensho kicks'][2] }}</td>
+                            <td>{{ specials['light tensho kicks'][3][0] }}</td>
+                            <td>{{ specials['light tensho kicks'][3][1] }}</td>
+                            <td>{{ specials['light tensho kicks'][4] }}</td>
+                            <td>{{ specials['light tensho kicks'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Medium Tensho Kicks &#129147;&#129147; + <span class="btn-m">K</span></td>
+                            <td>{{ specials['medium tensho kicks'][0] }}</td>
+                            <td>{{ specials['medium tensho kicks'][1] }}</td>
+                            <td>{{ specials['medium tensho kicks'][2] }}</td>
+                            <td>{{ specials['medium tensho kicks'][3][0] }}</td>
+                            <td>{{ specials['medium tensho kicks'][3][1] }}</td>
+                            <td>{{ specials['medium tensho kicks'][4] }}</td>
+                            <td>{{ specials['medium tensho kicks'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Heavy Tensho Kicks &#129147;&#129147; + <span class="btn-h">K</span></td>
+                            <td>{{ specials['heavy tensho kicks'][0] }}</td>
+                            <td>{{ specials['heavy tensho kicks'][1] }}</td>
+                            <td>{{ specials['heavy tensho kicks'][2] }}</td>
+                            <td>{{ specials['heavy tensho kicks'][3][0] }}</td>
+                            <td>{{ specials['heavy tensho kicks'][3][1] }}</td>
+                            <td>{{ specials['heavy tensho kicks'][4] }}</td>
+                            <td>{{ specials['heavy tensho kicks'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>OD Tensho Kicks &#129147;&#129147; + <span class="btn-n">KK</span></td>
+                            <td>{{ specials['od tensho kicks'][0] }}</td>
+                            <td>{{ specials['od tensho kicks'][1] }}</td>
+                            <td>{{ specials['od tensho kicks'][2] }}</td>
+                            <td>{{ specials['od tensho kicks'][3][0] }}</td>
+                            <td>{{ specials['od tensho kicks'][3][1] }}</td>
+                            <td>{{ specials['od tensho kicks'][4] }}</td>
+                            <td>{{ specials['od tensho kicks'][5] }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="super-section">
+                <img src="/static/images/move_titles/supers.png" class="move-titles" alt="super section">
+                <table>
+                    <thead>
+                        <tr>
+                            {% include "/partials/table_headers.html" %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="super-details">SA1</span> Kikosho &#129147;&#129150;&#129146;&#129147;&#129150;&#129146; + <span class="btn-n">P</span></td>
+                            <td>{{ super_arts['kikosho'][0] }}</td>
+                            <td>{{ super_arts['kikosho'][1] }}</td>
+                            <td>{{ super_arts['kikosho'][2] }}</td>
+                            <td>{{ super_arts['kikosho'][3][0] }}</td>
+                            <td>{{ super_arts['kikosho'][3][1] }}</td>
+                            <td>{{ super_arts['kikosho'][4] }}</td>
+                            <td>{{ super_arts['kikosho'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="super-details">SA1</span> Aerial Kikosho <span class="move-details">(During a Jump)</span>
+                                &#129147;&#129150;&#129146;&#129147;&#129150;&#129146; + <span class="btn-n">P</span>
+                            </td>
+                            <td>{{ super_arts['aerial kikosho'][0] }}</td>
+                            <td>{{ super_arts['aerial kikosho'][1] }}</td>
+                            <td>{{ super_arts['aerial kikosho'][2] }}</td>
+                            <td>{{ super_arts['aerial kikosho'][3][0] }}</td>
+                            <td>{{ super_arts['aerial kikosho'][3][1] }}</td>
+                            <td>{{ super_arts['aerial kikosho'][4] }}</td>
+                            <td>{{ super_arts['aerial kikosho'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td><span class="super-details">SA2</span> Hoyoku-sen &#129147;&#129150;&#129146;&#129147;&#129150;&#129146; + <span class="btn-n">K</span></td>
+                            <td>{{ super_arts['hoyoku-sen'][0] }}</td>
+                            <td>{{ super_arts['hoyoku-sen'][1] }}</td>
+                            <td>{{ super_arts['hoyoku-sen'][2] }}</td>
+                            <td>{{ super_arts['hoyoku-sen'][3][0] }}</td>
+                            <td>{{ super_arts['hoyoku-sen'][3][1] }}</td>
+                            <td>{{ super_arts['hoyoku-sen'][4] }}</td>
+                            <td>{{ super_arts['hoyoku-sen'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td><span class="super-details">SA3</span> Soten Ranka &#129147;&#129151;&#129144;&#129147;&#129151;&#129144; + <span class="btn-n">K</span></td>
+                            <td>{{ super_arts['soten ranka'][0] }}</td>
+                            <td>{{ super_arts['soten ranka'][1] }}</td>
+                            <td>{{ super_arts['soten ranka'][2] }}</td>
+                            <td>{{ super_arts['soten ranka'][3][0] }}</td>
+                            <td>{{ super_arts['soten ranka'][3][1] }}</td>
+                            <td>{{ super_arts['soten ranka'][4] }}</td>
+                            <td>{{ super_arts['soten ranka'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="super-details">CA</span> Soten Ranka <span class="move-details">(Vitality Under 25%)</span>
+                                &#129147;&#129151;&#129144;&#129147;&#129151;&#129144; + <span class="btn-n">K</span>
+                            </td>
+                            <td>{{ super_arts['soten ranka (under 25% vit)'][0] }}</td>
+                            <td>{{ super_arts['soten ranka (under 25% vit)'][1] }}</td>
+                            <td>{{ super_arts['soten ranka (under 25% vit)'][2] }}</td>
+                            <td>{{ super_arts['soten ranka (under 25% vit)'][3][0] }}</td>
+                            <td>{{ super_arts['soten ranka (under 25% vit)'][3][1] }}</td>
+                            <td>{{ super_arts['soten ranka (under 25% vit)'][4] }}</td>
+                            <td>{{ super_arts['soten ranka (under 25% vit)'][5] }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </table>
+            </div>
+            <div class="throw-section">
+                <img src="/static/images/move_titles/throws.png" class="move-titles" alt="throw section">
+                <table>
+                    <thead>
+                        <tr>
+                            {% include "/partials/table_headers.html" %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Koshuto <span class="move-details">(When Near Opponent)</span> &#129146; + <span class="btn-l">PK</span></td>
+                            <td>{{ throws['koshuto'][0] }}</td>
+                            <td>{{ throws['koshuto'][1] }}</td>
+                            <td>{{ throws['koshuto'][2] }}</td>
+                            <td>{{ throws['koshuto'][3][0] }}</td>
+                            <td>{{ throws['koshuto'][3][1] }}</td>
+                            <td>{{ throws['koshuto'][4] }}</td>
+                            <td>{{ throws['koshuto'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Taiji Fan <span class="move-details">(When Near Opponent)</span> &#129144; + <span class="btn-l">PK</span></td>
+                            <td>{{ throws['taiji fan'][0] }}</td>
+                            <td>{{ throws['taiji fan'][1] }}</td>
+                            <td>{{ throws['taiji fan'][2] }}</td>
+                            <td>{{ throws['taiji fan'][3][0] }}</td>
+                            <td>{{ throws['taiji fan'][3][1] }}</td>
+                            <td>{{ throws['taiji fan'][4] }}</td>
+                            <td>{{ throws['taiji fan'][5] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Ryuseiraku <span class="move-details">(When Near Opponent) (During a Jump)</span> <span class="btn-l">PK</span></td>
+                            <td>{{ throws['ryuseiraku'][0] }}</td>
+                            <td>{{ throws['ryuseiraku'][1] }}</td>
+                            <td>{{ throws['ryuseiraku'][2] }}</td>
+                            <td>{{ throws['ryuseiraku'][3][0] }}</td>
+                            <td>{{ throws['ryuseiraku'][3][1] }}</td>
+                            <td>{{ throws['ryuseiraku'][4] }}</td>
+                            <td>{{ throws['ryuseiraku'][5] }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <a href="#" id="back-to-top">
+            <span class="material-symbols-outlined">arrow_warm_up</span>
+        </a>
+    </main>
+</body>
+<style>
+    .character-box {
+        background: rgb(57,164,255);
+        background: radial-gradient(circle, rgba(57,164,255,1) 35%, rgba(52,140,214,1) 40%, rgba(31,96,149,1) 50%, rgba(9,64,111,1) 80%);
+    }
+
+    .character-name {
+        text-align: center;
+        color:rgb(178, 243, 248);
+        border-color:rgb(205, 237, 251);
+        background-image: url(../../static/images/characters/chunli.png);
+        background-repeat: no-repeat;
+        background-position-x: 142px;
+        background-position-y: -302px;   
+    }
+
+    tbody {
+        tr {
+            &:hover {
+                background-color: rgb(103, 163, 181);
+            }
+        }
+    }
+</style>
+</html>
