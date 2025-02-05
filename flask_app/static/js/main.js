@@ -1,11 +1,14 @@
-const returnTop = document.getElementById("back-to-top");
+const returnTopLeft = document.getElementById("back-to-top-left");
+const returnTopRight = document.getElementById("back-to-top-right");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop >= 1000 || document.documentElement.scrollTop > 1000) {
-        returnTop.style.display = "block";
+    if (document.body.scrollTop >= 900 || document.documentElement.scrollTop > 900) {
+        returnTopLeft.style.display = "block";
+        returnTopRight.style.display = "block";
     }   else {
-        returnTop.style.display = "none";
+        returnTopLeft.style.display = "none";
+        returnTopRight.style.display = "none";
     }
 }
 function topFunction() {

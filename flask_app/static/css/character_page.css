@@ -2,7 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 body {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(15, 15, 15, 0.5) 100%), url(../images/black_grafitti.jpg);
     background-size: cover;
@@ -135,10 +134,9 @@ img {
 
 /* ------------------------ BACK TO TOP BUTTON ------------------------ */
 
-#back-to-top {
+#back-to-top-left, #back-to-top-right {
     display: none;
     position: fixed;
-    left: 6px;
     bottom: 50%;
     background-color: #dc143c;
     color: white;
@@ -149,17 +147,25 @@ img {
     padding: 8px;
 }
 
-#back-to-top span {
+#back-to-top-left {
+    left: 6px;
+}
+
+#back-to-top-right {
+    right: 6px;
+}
+
+#back-to-top-left span, #back-to-top-right span {
     transition: 0.4s ease-out;
     font-size: 30px;
 }
 
-#back-to-top:hover {
+#back-to-top-left:hover, #back-to-top-right:hover {
     background-color: #f1f73d;;
     color: black;
 }
 
-#back-to-top:hover span {
+#back-to-top-left:hover span, #back-to-top-right:hover span {
     transform: translateY(-5px);
     transition: 0.2s;
 }

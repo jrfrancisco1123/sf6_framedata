@@ -1,7 +1,7 @@
 from flask_app import app
 from flask import render_template
 
-from flask_app.frame_data import aki, akuma, bison, blanka, cammy, chunli, deejay, dhalsim, ed, guile, honda, jamie, jp, juri, ken, kimberly, lily, luke, manon, marisa, rashid, ryu, terry, zangief
+from flask_app.frame_data import aki, akuma, bison, blanka, cammy, chunli, deejay, dhalsim, ed, guile, honda, jamie, jp, juri, ken, kimberly, lily, luke, mai, manon, marisa, rashid, ryu, terry, zangief
 
 @app.route('/sf6_framedata/character/aki')
 def view_aki():
@@ -77,7 +77,7 @@ def view_luke():
 
 @app.route('/sf6_framedata/character/mai')
 def view_mai():
-    return render_template('characters/mai.html')
+    return render_template('characters/mai.html', commons=mai.commons, normals=mai.normals, uniques=mai.uniques, specials=mai.specials, super_arts=mai.super_arts, throws=mai.throws)
 
 @app.route('/sf6_framedata/character/manon')
 def view_manon():
