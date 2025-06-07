@@ -82,9 +82,9 @@ specials = {
 
 super_arts = {
     'dragonlash flame': ['7', '7-9', '41', ['D', '-24'], '2000', 'High'],
-    'shippu jinrai-kyaku': ['6', '6-60', '32', ['D', '-19'], '2800', 'High'],
-    'shinryu reppa': ['7', '7-45', '45', ['D', '-30'], '4000', 'High'],
-    'shinryu reppa (under 25% vit)': ['7', '7-45', '45', ['D', '-30'], '4500', 'High']
+    'shippu jinrai-kyaku': ['6', '6-61', '28', ['D', '-5'], '2800', 'High'],
+    'shinryu reppa': ['7', '7-45', '55', ['D', '-40'], '4000', 'High'],
+    'shinryu reppa (under 25% vit)': ['7', '7-45', '45', ['D', '-40'], '4500', 'High']
 }
 
 throws = {

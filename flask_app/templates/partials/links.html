@@ -155,5 +155,11 @@
         {% else %}
         <li><a href="/sf6_framedata/character/mai">Mai</a></li>
         {% endif %}
+
+        {% if request.path == '/sf6_framedata/character/elena' %}
+            {{ disabled }}
+        {% else %}
+        <li><a href="/sf6_framedata/character/elena">Elena</a></li>
+        {% endif %}
     </ul>
 </div>

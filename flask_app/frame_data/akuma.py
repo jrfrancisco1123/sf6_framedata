@@ -74,7 +74,7 @@ specials = {
     'light adamant flame (2)': ['7', '7-10', '18', ['3', '-10'], '500', 'High'],
     'medium adamant flame (1)': ['19', '19-21', '20', ['2', '-4'], '800', 'High'],
     'medium adamant flame (2)': ['7', '7-10', '32', ['D', '-18'], '600', 'High'],
-    'heavy adamant flame (1)': ['23', '23-25', '19', ['3', '-2'], '900', 'High'],
+    'heavy adamant flame (1)': ['23', '23-25', '19', ['3', '-3'], '900', 'High'],
     'heavy adamant flame (2)': ['11', '11-14', '28', ['D', '-14'], '600', 'High'],
     'od adamant flame (1)': ['18', '18-20', '23', ['1', '-3'], '700', 'High'],
     'od adamant flame (2)': ['7', '7-17', '25', ['D', '-18'], '700', 'High'],

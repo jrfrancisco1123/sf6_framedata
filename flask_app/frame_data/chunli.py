@@ -23,7 +23,7 @@ normals = {
         'chp': ['11', '11-23', '18', ['1', '-3'], '900', 'High'],
         'clk': ['4', '4-5', '10', ['0', '-2'], '200', 'Low'],
         'cmk': ['7', '7-9', '19', ['-2', '-6'], '500', 'Low'],
-        'chk': ['9', '9-14', '19', ['D', '-7'], '900', 'Low'],
+        'chk': ['9', '9-14', '19', ['D', '-9'], '900', 'Low'],
         'jlp': ['4', '4-13', '3 frames after landing', ['', ''], '300', 'Mid'],
         'jmp': ['7', '7-21', '3 frames after landing', ['', ''], '600', 'Mid'],
         'jhp': ['9', '9-14', '3 frames after landing', ['', ''], '800', 'Mid'],
@@ -36,7 +36,7 @@ normals = {
 uniques = {
     'swift thrust': ['7', '7-9', '15', ['2', '-3'], '600', 'High'],
     'hakkei': ['8', '8-13', '14', ['5', '-1'], '800', 'High'],
-    'water lotus fist': ['21', '21-24', '14', ['1', '-2'], '800', 'Mid'],
+    'water lotus fist': ['21', '21-23', '15', ['2', '-2'], '800', 'Mid'],
     'yokusen kick': ['16', '16-17', '23', ['-1', '-4'], '800', 'High'],
     'falling crane': ['37', '37-38', '1+12 frames after landing', ['7', '3'], '800', 'Mid'], 
     'yoso kick (1)': ['3', '3-13', '3 frames after landing', ['', ''], '300', 'High'],
@@ -57,15 +57,15 @@ specials = {
     'medium kikoken': ['12', '12-66', '45 total frames', ['-3', '-7'], '600', 'High-Projectile'],
     'heavy kikoken': ['11', '11-35', '43 total frames', ['-2', '-6'], '600', 'High-Projectile'],
     'od kikoken': ['11', '', '39 total frames', ['0', '5'], '800', 'High-Projectile'],
-    'light hundred lightning kicks': ['8', '8-23', '20', ['3', '-8'], '800', 'High'],
-    'medium hundred lightning kicks': ['14', '14-34', '22', ['3', '-8'], '900', 'High'],
+    'light hundred lightning kicks': ['5', '5-20', '20', ['3', '-8'], '800', 'High'],
+    'medium hundred lightning kicks': ['12', '12-32', '22', ['3', '-8'], '900', 'High'],
     'heavy hundred lightning kicks': ['23', '23-47', '15', ['D', '-3'], '1000', 'High'],
-    'od hundred lightning kicks': ['8', '8-33', '21', ['3', '-3'], '800', 'High'],
+    'od hundred lightning kicks': ['8', '8-33', '21', ['3', '-3'], '1000', 'High'],
     'lightning kick barrage': ['11', '11-46', '25', ['D', '-13'], '700', 'High'],
     'light aerial hundred lightning kicks': ['8', '21', '15 frames after landing', ['', ''], '900', 'High'],
     'medium aerial hundred lightning kicks': ['10', '10-30', '15 frames after landing', ['', ''], '1000', 'High'],
     'heavy aerial hundred lightning kicks': ['12', '12-35', '15 frames after landing', ['', ''], '1100', 'High'],
-    'od aerial hundred lightning kicks': ['6', '6-31', '15 frames after landing', ['', ''], '1600', 'High'],
+    'od aerial hundred lightning kicks': ['6', '6-31', '5 frames after landing', ['', ''], '1600', 'High'],
     'light spinning bird kick': ['9', '9-26', '6+24 frames after landing', ['D', '-18'], '1000', 'High'],
     'medium spinning bird kick': ['16', '16-48', '8+21 frames after landing', ['D', '-17'], '1200', 'High'],
     'heavy spinning bird kick': ['20', '20-64', '8+22 frames after landing', ['D', '-18'], '1400', 'High'],
@@ -77,7 +77,7 @@ specials = {
     'light tensho kicks': ['5', '5-18', '27+12 frames after landing', ['D', '-37'], '900', 'High'],
     'medium tensho kicks': ['7', '7-20', '31+12 frames after landing', ['D', '-41'], '1000', 'High'],
     'heavy tensho kicks': ['9', '9-43', '26+12 frames after landing', ['D', '-57'], '1200', 'High'],
-    'od tensho kicks': ['6', '6-65', '14+27 frames after landing', ['D', '-40'], '1400', 'High']
+    'od tensho kicks': ['6', '6-66', '37+12 frames after landing', ['D', '-40'], '1400', 'High']
     }
 
 super_arts = {

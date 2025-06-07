@@ -74,7 +74,7 @@ specials = {
     'heavy whirlwind shot charged': ['34', '', '', ['5', '0'], '900', 'High-Projectile'],
     'heavy whirlwind shot hold': ['53', '', '', ['16', '8'], '1000', 'High-Projectile'],
     'od whirlwind shot': ['17', '', '52 total frames', ['D', '-2'], '700', 'High-Projectile'],
-    'od whirlwind shot charged': ['44', '', '', ['D', '10'], '1200', 'High-Projectile'],
+    'od whirlwind shot charged': ['41', '', '', ['D', '10'], '1200', 'High-Projectile'],
     'light arabian cyclone': ['15', '15-27', '47 total frames', ['2', '-6'], '800', 'High'],
     'medium arabian cyclone': ['20', '20-22', '50 total frames', ['4', '-4'], '900', 'High'],
     'heavy arabian cyclone': ['27', '27-29', '69 total frames', ['D', '-2'], '1000', 'High'],

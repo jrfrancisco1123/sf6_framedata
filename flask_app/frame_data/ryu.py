@@ -21,7 +21,7 @@ normals = {
         'clp': ['4', '4-5', '9', ['4', '-1'], '300', 'High'],
         'cmp': ['6', '6-9', '13', ['5', '0'], '600', 'High'],
         'chp': ['9', '9-14', '22', ['1', '-7'], '800', 'High'],
-        'clk': ['5', '5-6', '10', ['3', '-3'], '200', 'Low'],
+        'clk': ['5', '5-6', '10', ['3', '-1'], '200', 'Low'],
         'cmk': ['8', '8-10', '19', ['1', '-6'], '500', 'Low'],
         'chk': ['9', '9-11', '23', ['D', '-12'], '900', 'Low'],
         'jlp': ['4', '4-13', '3 frames after landing', ['', ''], '300', 'Mid'],
@@ -29,7 +29,7 @@ normals = {
         'jhp': ['9', '9-14', '3 frames after landing', ['', ''], '800', 'Mid'],
         'jlk': ['6', '6-15', '3 frames after landing', ['', ''], '300', 'Mid'],
         'jmk': ['7', '7-12', '3 frames after landing', ['', ''], '500', 'Mid'],
-        'jhk': ['12', '12-19', '3 frames after landing', ['', ''], '800', 'Mid']
+        'jhk': ['10', '10-17', '3 frames after landing', ['', ''], '800', 'Mid']
     }
 
 uniques = {
@@ -44,15 +44,15 @@ uniques = {
 }
 
 specials = {
-    'light hadoken': ['16', '', '47 total frames', ['1', '-5'], '600', 'High-Projectile'],
-    'medium hadoken': ['14', '', '47 total frames', ['-1', '-7'], '600', 'High-Projectile'],
-    'heavy hadoken': ['12', '', '47 total frames', ['-3', '-9'], '600', 'High-Projectile'],
-    'hadoken (denjin charge)': ['12', '', '42 total frames', ['D', '-3'], '800', 'High-Projectile'],
-    'od hadoken': ['12', '', '40 total frames', ['D', '-1'], '800', 'High-Projectile'],
-    'od hadoken (denjin charge)': ['12', '', '38 total frames', ['D', '2'], '1000', 'High-Projectile'],
+    'light hadoken': ['16', '', '47 total frames', ['2', '-5'], '700', 'High-Projectile'],
+    'medium hadoken': ['14', '', '47 total frames', ['-0', '-7'], '700', 'High-Projectile'],
+    'heavy hadoken': ['12', '', '47 total frames', ['-2', '-9'], '700', 'High-Projectile'],
+    'hadoken (denjin charge)': ['12', '', '40 total frames', ['D', '-1'], '1000', 'High-Projectile'],
+    'od hadoken': ['12', '', '40 total frames', ['D', '-1'], '1000', 'High-Projectile'],
+    'od hadoken (denjin charge)': ['12', '', '38 total frames', ['D', '2'], '1200', 'High-Projectile'],
     'light shoryuken': ['5', '5-14', '21+12 frames after landing', ['D', '-23'], '1100', 'High'],
     'medium shoryuken': ['6', '6-15', '30+12 frames after landing', ['D', '-32'], '1200', 'High'],
-    'heavy shoryuken': ['7', '7-16', '34+15 frames after landing', ['D', '-39'], '1400', 'High'],
+    'heavy shoryuken': ['7', '7-16', '34+12 frames after landing', ['D', '-36'], '1400', 'High'],
     'od shoryuken': ['6', '6-15', '37+15 frames after landing', ['D', '-40'], '1600', 'High'],
     'light tatsumaki senpu-kyaku': ['12', '12-14', '14+18 frames after landing', ['D', '-15'], '900', 'High'],
     'medium tatsumaki senpu-kyaku': ['14', '14-30', '11+20 frames after landing', ['D', '-13'], '1000', 'High'],

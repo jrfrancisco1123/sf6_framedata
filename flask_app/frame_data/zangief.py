@@ -41,15 +41,15 @@ uniques = {
     'hell stab': ['7', '7-9', '21', ['-1', '-3'], '800', 'High'],
     'knee hammer': ['14', '14-20', '13', ['1', '-4'], '700', 'High'],
     'headbutt': ['14', '14-18', '15', ['8', '4'], '1000', 'High'],
-    'cyclone wheel kick': ['22', '22-28', '25', ['D', '-9'], '1300', 'High'],
+    'cyclone wheel kick': ['22', '22-28', '25', ['D', '-9'], '1300', 'Mid'],
     'smetana dropkick': ['16', '16-19', '40', ['D', '-18'], '1000', 'High'],
     'flying body press (airborne)': ['9', '9-17', '8 frames after landing', ['', ''], '800', 'Mid'],
     'flying headbutt (neutral jump)': ['8', '8-11', '3 frames after landing', ['', ''], '900', 'Mid'],
     'machine gun chops (2)': ['9', '9-12', '20', ['2', '-6'], '600', 'High'],
     'machine gun chops (3)': ['15', '15-17', '32', ['D', '-17'], '900', 'High'],
-    'power stomps (1)': ['9', '9-11', '17', ['4', '-3'], '500', 'High'],
-    'power stomps (2)': ['9', '9-11', '19', ['-3', '-4'], '500', 'High'],
-    'power stomps (3)': ['10', '10-12', '24', ['-2', '-10'], '700', 'High']
+    'power stomps (1)': ['9', '9-11', '17', ['4', '-3'], '500', 'Low'],
+    'power stomps (2)': ['9', '9-11', '19', ['-3', '-4'], '500', 'Low'],
+    'power stomps (3)': ['10', '10-12', '24', ['-2', '-10'], '700', 'Low']
 }
 
 specials = {

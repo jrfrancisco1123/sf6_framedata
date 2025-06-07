@@ -37,9 +37,9 @@ uniques = {
     'horn breaker': ['14', '14-17', '18', ['5', '-2'], '1000', 'High'],
     'great spin': ['9', '9-19', '3 frames after landing', ['', ''], '800', 'Mid'],
     'double arrow': ['10', '10-12', '3 frames after landing', ['', ''], '700', 'Mid'],
-    'desert storm (1)': ['18', '18-19', '24', ['2', '-5'], '900', 'High'],
+    'desert storm (1)': ['16', '16-17', '24', ['2', '-4'], '900', 'High'],
     'desert storm (2)': ['20', '20-21', '27', ['0', '-9'], '500', 'High'],
-    'desert storm (3)': ['20', '20-24', '42', ['D', '-26'], '500', 'High']
+    'desert storm (3)': ['20', '20-24', '39', ['D', '-23'], '800', 'High']
 }
 
 specials = {
@@ -75,10 +75,10 @@ specials = {
 
 super_arts = {
     'breezing hawk': ['10', '10-47', '54', ['D', '-36'], '2200', 'High'],
-    'thunderbird': ['9', '9-41', '39+24 frames after landing', ['D', '-48'], '2600', 'High'],
-    'thunderbird (windclad)': ['9', '9-41', '39+24 frames after landing', ['D', '-48'], '2900', 'High'],
-    'soaring thunderbird': ['9', '9-41', '25 frames after landing', ['D', '-54'], '2600', 'High'],
-    'soaring thunderbird (windclad)': ['9', '9-41', '25 frames after landing', ['D', '-51'], '2900', 'High'],
+    'thunderbird': ['9', '9-41', '39+24 frames after landing', ['D', '-60'], '2600', 'High'],
+    'thunderbird (windclad)': ['9', '9-41', '39+24 frames after landing', ['D', '-59'], '2900', 'High'],
+    'soaring thunderbird': ['9', '9-41', '25 frames after landing', ['D', ''], '2600', 'High'],
+    'soaring thunderbird (windclad)': ['9', '9-41', '25 frames after landing', ['D', ''], '2900', 'High'],
     'raging typhoon': ['7', '7-8', '106', ['D', ''], '4500', 'Throw'],
     'raging typhoon (under 25% vit)': ['7', '7-8', '106', ['D', ''], '5000', 'Throw']
 }
